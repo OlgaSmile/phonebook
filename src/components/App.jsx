@@ -35,6 +35,8 @@ export function App() {
             path="/contacts"
             element={<PrivateRoute component={ContactsPage} />}
           />
+
+          <Route path="*" element={<SharedLayout />} />
         </Route>
       </Routes>
     </>
