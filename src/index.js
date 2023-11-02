@@ -5,7 +5,7 @@ import './index.css';
 import { Provider } from 'react-redux';
 import { persistor, store } from './Redux/store';
 import { PersistGate } from 'redux-persist/lib/integration/react';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { ChakraProvider } from '@chakra-ui/react';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -13,9 +13,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <ChakraProvider>
-          <BrowserRouter basename="/phonebook">
+          <HashRouter basename="/phonebook">
             <App />
-          </BrowserRouter>
+          </HashRouter>
         </ChakraProvider>
       </PersistGate>
     </Provider>
